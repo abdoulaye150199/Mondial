@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Système de Gestion de Cargaisons</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-gray-800 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <h1 class="text-3xl font-bold text-white">Système de Gestion de Cargaisons</h1>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Grid principale -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Section Création Cargaison -->
+            <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+                <div class="border-b border-gray-200 pb-4 mb-6">
+                    <h2 class="text-2xl font-semibold text-gray-900">Nouvelle Cargaison</h2>
+                </div>
+                <form id="cargaison-form" class="space-y-6">
+                    <div class="space-y-2">
+                        <label for="cargaison-type" class="text-sm font-medium text-gray-700 block">
+                            Type de Cargaison
+                        </label>
+                        <select id="cargaison-type" class="w-full rounded-lg border-gray-300 shadow-sm focus:border-gray-900 focus:ring-2 focus:ring-gray-900">
+                            <option value="routiere">Routière</option>
+                            <option value="maritime">Maritime</option>
+                            <option value="aerienne">Aérienne</option>
+                        </select>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label for="cargaison-id" class="text-sm font-medium text-gray-700 block">
+                            Identifiant
+                        </label>
+                        <input type="text" id="cargaison-id" 
+                               class="w-full rounded-lg border-gray-300 shadow-sm focus:border-gray-900 focus:ring-2 focus:ring-gray-900"
+                               placeholder="ex: CARG_001" required>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label for="cargaison-distance" class="text-sm font-medium text-gray-700 block">
+                            Distance (km)
+                        </label>
+                        <input type="number" id="cargaison-distance" 
+                               class="w-full rounded-lg border-gray-300 shadow-sm focus:border-gray-900 focus:ring-2 focus:ring-gray-900"
+                               min="1" required>
+                    </div>
+
+                    <button type="submit" 
+                            class="w-full bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 transition-colors">
+                        Créer Cargaison
+                    </button>
+                </form>
+            </div>
+
+            <!-- Section Ajout Produit -->
+            <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+                <div class="border-b border-gray-200 pb-4 mb-6">
+                    <h2 class="text-2xl font-semibold text-gray-900">Ajouter un Produit</h2>
+                </div>
+                <form id="product-form" class="space-y-6">
+                    <div class="space-y-2">
+                        <label for="product-type" class="text-sm font-medium text-gray-700 block">
+                            Type de Produit
+                        </label>
+                        <select id="product-type" class="w-full rounded-lg border-gray-300 shadow-sm focus:border-gray-900 focus:ring-2 focus:ring-gray-900">
+                            <option value="alimentaire">Alimentaire</option>
+                            <option value="chimique">Chimique</option>
+                            <option value="materiel">Matériel</option>
+                        </select>
+                    </div>
+
+                    <div id="extra-fields" class="space-y-4"></div>
+
+                    <div class="space-y-2">
+                        <label for="product-id" class="text-sm font-medium text-gray-700 block">
+                            Identifiant
+                        </label>
+                        <input type="text" id="product-id" 
+                               class="w-full rounded-lg border-gray-300 shadow-sm focus:border-gray-900 focus:ring-2 focus:ring-gray-900"
+                               placeholder="ex: PROD_001" required>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label for="product-weight" class="text-sm font-medium text-gray-700 block">
+                            Poids (kg)
+                        </label>
+                        <input type="number" id="product-weight" 
+                               class="w-full rounded-lg border-gray-300 shadow-sm focus:border-gray-900 focus:ring-2 focus:ring-gray-900"
+                               min="0.1" step="0.1" required>
+                    </div>
+
+                    <button type="submit" 
+                            class="w-full bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 transition-colors">
+                        Ajouter Produit
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Section Liste des Cargaisons -->
+        <div class="mt-12 bg-white rounded-xl shadow-md p-6">
+            <div class="border-b border-gray-200 pb-4 mb-6">
+                <h2 class="text-2xl font-semibold text-gray-900">Liste des Cargaisons</h2>
+            </div>
+            <div id="cargaisons-container" 
+                 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            </div>
+        </div>
+    </main>
+
+    <!-- Toast Notifications -->
+    <div id="toast-container" 
+         class="fixed bottom-4 right-4 space-y-4">
+    </div>
+
+    <script type="module" src="ui/main.js"></script>
+</body>
+</html>

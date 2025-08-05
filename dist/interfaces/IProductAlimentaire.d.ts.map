@@ -1,0 +1,1 @@
+{"version":3,"file":"IProductAlimentaire.d.ts","sourceRoot":"","sources":["../../src/interfaces/IProductAlimentaire.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,QAAQ,EAAE,MAAM,YAAY,CAAC;AAEtC;;GAEG;AACH,MAAM,WAAW,mBAAoB,SAAQ,QAAQ;IACnD,QAAQ,CAAC,IAAI,EAAE,aAAa,CAAC;CAC9B"}

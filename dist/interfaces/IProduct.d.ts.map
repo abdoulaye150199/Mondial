@@ -1,0 +1,1 @@
+{"version":3,"file":"IProduct.d.ts","sourceRoot":"","sources":["../../src/interfaces/IProduct.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH,MAAM,WAAW,QAAQ;IACvB,QAAQ,CAAC,EAAE,EAAE,MAAM,CAAC;IACpB,QAAQ,CAAC,OAAO,EAAE,MAAM,CAAC;IACzB,QAAQ,CAAC,KAAK,EAAE,MAAM,CAAC;CACxB"}

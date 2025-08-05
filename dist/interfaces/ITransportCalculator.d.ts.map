@@ -1,0 +1,1 @@
+{"version":3,"file":"ITransportCalculator.d.ts","sourceRoot":"","sources":["../../src/interfaces/ITransportCalculator.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,QAAQ,EAAE,MAAM,YAAY,CAAC;AAEtC;;GAEG;AACH,MAAM,WAAW,oBAAoB;IACnC,sBAAsB,CAAC,KAAK,EAAE,MAAM,EAAE,QAAQ,EAAE,MAAM,GAAG,MAAM,CAAC;IAChE,oBAAoB,CAAC,OAAO,EAAE,QAAQ,EAAE,QAAQ,EAAE,MAAM,GAAG,MAAM,CAAC;CACnE"}

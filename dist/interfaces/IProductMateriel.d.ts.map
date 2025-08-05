@@ -1,0 +1,1 @@
+{"version":3,"file":"IProductMateriel.d.ts","sourceRoot":"","sources":["../../src/interfaces/IProductMateriel.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,QAAQ,EAAE,MAAM,YAAY,CAAC;AAEtC;;GAEG;AACH,MAAM,WAAW,gBAAiB,SAAQ,QAAQ;IAChD,QAAQ,CAAC,IAAI,EAAE,UAAU,CAAC;IAC1B,QAAQ,CAAC,SAAS,EAAE,OAAO,CAAC;IAC5B,QAAQ,CAAC,UAAU,EAAE,OAAO,CAAC;CAC9B"}
