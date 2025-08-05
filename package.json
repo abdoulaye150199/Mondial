@@ -6,7 +6,8 @@
     "build": "tsc",
     "start": "node dist/main.js",
     "dev": "tsc && node dist/main.js",
-    "test": "tsc && node dist/test.js"
+    "test": "tsc && node dist/test.js",
+    "serve": "python3 -m http.server 8000"
   },
   "keywords": [],
   "author": "",
